@@ -5,10 +5,15 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/YuryFilipovich/go-rss/internal/database"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 )
+
+type apiConfig struct {
+	DB *database.Queries
+}
 
 func main() {
 	err := godotenv.Load()
